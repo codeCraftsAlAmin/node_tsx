@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { pool } from "../../db";
 import { todosService } from "./todos.service";
 
 const createTodo = async (req: Request, res: Response) => {
