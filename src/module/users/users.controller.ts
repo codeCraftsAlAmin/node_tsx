@@ -3,10 +3,8 @@ import { userService } from "./users.service";
 
 const createUsers = async (req: Request, res: Response) => {
   // console.log(req.body);
-  const { name, email, age } = req.body;
-
   try {
-    const result = await userService.createUser(name, email, age);
+    const result = await userService.createUser(req.body);
 
     // console.log(result.rows[0]);
     res.status(201).send({

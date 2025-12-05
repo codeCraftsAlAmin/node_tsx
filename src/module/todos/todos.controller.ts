@@ -3,8 +3,8 @@ import { todosService } from "./todos.service";
 
 const createTodo = async (req: Request, res: Response) => {
   try {
-    const { user_id, title } = req.body;
-    const result = await todosService.createTodo(user_id, title);
+    // const { user_id, title } = req.body;
+    const result = await todosService.createTodo(req.body);
 
     res.status(201).send({
       success: true,
@@ -107,4 +107,4 @@ export const todosController = {
   getSingleTodo,
   updateTodo,
   deleteTodo,
-};
+}; 
